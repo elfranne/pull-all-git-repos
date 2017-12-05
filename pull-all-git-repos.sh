@@ -3,7 +3,7 @@
 # and need to do this every morning
 
 #change this to your git directory
-gitbase=/Users/jeremy/github/
+gitbase=~/RubymineProjects
 
 #get the pwd to return to after we are done refreshing
 curdir=`pwd`
@@ -26,6 +26,7 @@ do
 
     printf "\nUpdating $repo\n"
     cd $repo
+    git checkout master
     git pull
     cd $gitbase
     printf "\n"
